@@ -13,6 +13,7 @@ class App {
     this.App.use(express.json())
     this.App.use(routes)
     this.App.use(cors())
+    this.App.use(express.static('public'))
   }
 
 }

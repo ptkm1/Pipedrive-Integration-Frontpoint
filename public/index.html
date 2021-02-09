@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <link rel="stylesheet" href="https://blob.contato.io/machine-files/all-css/form-ll.css">
+</head>
+<body>
+<form action="https://paginas.rocks/pages/index/523289" id="myform" method="post" >
+  <input id="id" name="id" type="hidden" value="523289" />
+  <input id="mid" name="mid" type="hidden" value="523289" />
+  <input id="pid" name="pid" type="hidden" value="18180661" />
+  <input id="list_id" name="list_id" type="hidden" value="523289" />
+  <input id="provider" name="provider" type="hidden" value="leadlovers" />
+  <label for="name">Nome:</label>
+  <input class="form-control form-ll" id="name" name="name" placeholder="Informe o seu nome" type="text"  />
+  <label for="email">E-mail:</label>
+  <input class="form-control form-ll" id="email" name="email" placeholder="Informe o seu email" type="text" />
+  <label for="phone">Telefone:</label>
+  <input class="form-control form-ll" id="phone" name="phone" placeholder="Informe o telefone" type="text" />
+  <label for="city">Cidade:</label>
+  <input class="form-control form-ll" id="city" name="city" placeholder="Linkedin" type="text" />
+  <label for="birthdate">Nascimento:</label>
+  <input type="hidden" class="form-control form-ll" id="birthdate" name="birthdate" placeholder="Nome do FORMULARIO" type="text" value="teste" />
+  <button class="btn btn-danger" style="padding: 10px 40px; margin:15px 0 5px; background-color: rgba(40, 214, 118, 1); border-color: rgba(40, 214, 118, 1) !important; " type="submit">Enviar</button>
+  <input type="hidden" id="source" name="source" value="" />
+  <img src="https://llimages.com/redirect/redirect.aspx?A=V&p=18180661&m=523289" style="display: none;" />
+</form>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    <script>
+    
+        let nameCarreira = document.getElementById("name")
+        let classteste = document.getElementById("email")
+        let emailCarreira = document.getElementById("email")
+        let phoneCarreira = document.getElementById("phone")
+        let linkedin = document.getElementById("city")
+        
+        const myform = document.getElementById('myform')
+        
+        
+        
+        myform.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          const formdata = new FormData(document.getElementById('myform'))
+          console.log(formdata)
+        axios({ method: 'POST', url: 'https://3000-turquoise-ape-kbv9n28m.ws-us03.gitpod.io/testrequest', headers: {'Access-Control-Allow-Origin': '*'}, 
+        data: { name: 'nometeste' } })
+          .then(response => {
+            alert('deu certo')
+            console.log(response.data)
+          })
+        })
+        
+    </script>
+</body>
+</html>

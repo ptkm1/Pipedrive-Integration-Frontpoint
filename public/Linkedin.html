@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//paginas.rocks/Content/capture/forms/formCustom.css" />
+</head>
+<body>
+<!-- <h1 style="display: flex;width: 100%; justify-content: center; font-size: 3.5rem;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+  Reestilização Linkedin
+</h1> -->
+
+<form id="llCaptureForm" class="llformCustom"  style="background-color: rgba(255, 255, 255, 1) !important;"  action="//paginas.rocks/capture" method="post">
+   <input type="hidden" id="mid" name="mid" value="523285" />
+   <input type="hidden" id="fid" name="fid" value="33953" />
+   <div>
+       <label  for="llfield60408">Nome*</label>
+       <input type="text" id="llfield60408" name="llfield60408" placeholder="Nome" />
+       <div class="field-error" id="llerror60408"></div>
+   </div>
+   <div>
+       <label  for="llfield60418">E-mail</label>
+       <input type="email" id="llfield60418" name="llfield60418" placeholder="seu melhor e-mail" data-required="true" />
+       <div class="field-error" id="llerror60418"></div>
+   </div>
+   <div>
+       <label  for="llfield60417">LinkedIn</label>
+       <input type="text" id="llfield60417" name="llfield60417" placeholder="Insira o link do seu perfil no LinkedIn" />
+       <div class="field-error" id="llerror60417"></div>
+   </div>
+   <div>
+       <label  for="llfield60419">Telefone</label>
+       <input type="tel" id="llfield60419" name="llfield60419" placeholder="seu melhor telefone para contato" />
+       <div class="field-error" id="llerror60419"></div>
+   </div>
+   <div class="button-bar">
+       <button  style="background-color: #7ab934 !important;" onclick="testar()" type="submit">Enviar</button>
+   </div>
+   <div class="loading-box">
+       <img src="//paginas.rocks/content/images/spinner.gif" />
+       <div>loading...</div>
+   </div>
+   <div class="error-box">
+       <img src="//paginas.rocks/content/images/error-icon.png" />
+       <div></div>
+       <button type="button" class="btn" id="btn-error">Ok</button>
+   </div>
+   <img src="https://llimages.com/redirect/redirect.aspx?A=V&f=33953&m=523285" style="display: none;" />
+</form>
+
+
+<script type="text/javascript" src="//paginas.rocks/scripts/capture/capture.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    
+    <script>
+    
+      //let classteste = document.getElementById("email")
+        let nameCarreira = document.getElementById("llfield60408")
+        let emailCarreira = document.getElementById("llfield60418")
+        let phoneCarreira = document.getElementById("llfield60419")
+        let linkedin = document.getElementById("llfield60417")
+        
+        const myform = document.getElementById('llCaptureForm')
+
+     function testar() {
+        axios({ 
+          method: 'POST', 
+          url: 'https://3000-turquoise-ape-kbv9n28m.ws-us03.gitpod.io/fplinkedin', 
+          headers: {'Access-Control-Allow-Origin': '*'}, 
+          data: { 
+                  name: nameCarreira.value,
+                  email: emailCarreira.value,
+                  phone: phoneCarreira.value,
+                  linkedin: linkedin.value
+                } 
+            })
+            .then(response => {
+              alert('deu certo')
+              console.log(response.data)
+            })
+      
+      }
+    </script>
+</body>
+</html>
