@@ -14,7 +14,4 @@ class App {
     this.App.use(routes)
     this.App.use(cors())
     this.App.use(express.static('public'))
-	}
-}
-
 export default new App()

@@ -33,6 +33,7 @@ var App = /** @class */ (function () {
         this.App.use(express_1.default.json());
         this.App.use(routes_1.default);
         this.App.use(cors_1.default());
+	this.App.use(express_1.default.static('public'));
     }
     return App;
 }());

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" type="text/css" /> 
   <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="//paginas.rocks/Content/capture/forms/formCustom.css" />
 </head>
 <body>
-<h1>Formulário de Carreira</h1>
-<form id="llCaptureForm" class="llformCustom"  style="background-color: rgba(255, 255, 255, 1) !important;" action="//paginas.rocks/capture" method="post">
-   <input type="hidden" id="mid" name="mid" value="523289" />
-   <input type="hidden" id="fid" name="fid" value="33955" />
+<form id="llCaptureForm" class="llformCustom"  style="background-color: rgba(255, 255, 255, 1) !important;"  action="//paginas.rocks/capture" method="post">
+   <input type="hidden" id="mid" name="mid" value="523280" />
+   <input type="hidden" id="fid" name="fid" value="33952" />
    <div>
-       <label  for="llfield60408">Nome*</label> 
-       <input type="text" id="llfield60408" name="llfield60408" placeholder="Nome" data-required="true" />
+       <label  for="llfield60408">Nome*</label>
+       <input type="text" id="llfield60408" name="llfield60408" placeholder="Nome" />
        <div class="field-error" id="llerror60408"></div>
    </div>
    <div>
@@ -25,17 +24,12 @@
    </div>
    <div>
        <label  for="llfield60416">Cargo</label>
-       <textarea id="llfield60416" name="llfield60416" placeholder="seu cargo atual" data-required="true"></textarea>
+       <textarea id="llfield60416" name="llfield60416" placeholder="seu cargo atual"></textarea>
        <div class="field-error" id="llerror60416"></div>
    </div>
    <div>
-       <label  for="llfield60417">LinkedIn</label>
-       <input type="text" id="llfield60417" name="llfield60417" placeholder="Insira o link do seu perfil no LinkedIn" data-required="true" />
-       <div class="field-error" id="llerror60417"></div>
-   </div>
-   <div>
        <label  for="llfield60419">Telefone</label>
-       <input type="tel" id="llfield60419" name="llfield60419" placeholder="seu melhor telefone para contato" data-required="true" />
+       <input type="tel" id="llfield60419" name="llfield60419" placeholder="seu melhor telefone para contato" />
        <div class="field-error" id="llerror60419"></div>
    </div>
    <div class="button-bar">
@@ -50,7 +44,7 @@
        <div></div>
        <button type="button" class="btn" id="btn-error">Ok</button>
    </div>
-   <img src="https://llimages.com/redirect/redirect.aspx?A=V&f=33955&m=523289" style="display: none;" />
+   <img src="https://llimages.com/redirect/redirect.aspx?A=V&f=33952&m=523280" style="display: none;" />
 </form>
 
 
@@ -60,32 +54,33 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     
     <script>
+    
+      //let classteste = document.getElementById("email")
         let nameCarreira = document.getElementById("llfield60408")
         let emailCarreira = document.getElementById("llfield60418")
         let phoneCarreira = document.getElementById("llfield60419")
-        let linkedin = document.getElementById("llfield60416")
+        let cargo = document.getElementById("llfield60416")
         
         const myform = document.getElementById('llCaptureForm')
 
      function testar() {
         axios({ 
           method: 'POST', 
-          url: 'https://3000-turquoise-ape-kbv9n28m.ws-us03.gitpod.io/fpcarreira', 
+          url: 'https://3000-turquoise-ape-kbv9n28m.ws-us03.gitpod.io/fpnegocio', 
           headers: {'Access-Control-Allow-Origin': '*'}, 
           data: { 
                   name: nameCarreira.value,
                   email: emailCarreira.value,
                   phone: phoneCarreira.value,
-                  cargo: linkedin.value
+                  cargo: cargo.value
                 } 
-                })
+            })
             .then(response => {
               alert('deu certo')
               console.log(response.data)
             })
       
       }
-        
     </script>
 </body>
 </html>

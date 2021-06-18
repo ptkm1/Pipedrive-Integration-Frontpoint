@@ -23,7 +23,7 @@ class FormsFrontpoint {
         if(respostaPerson){
 
           const objDeal = {
-            title: "FP-Carreira - TesteDEV",
+            title: "FP-Carreira",
             value: 0,
             currency: 'BRL',
             user_id: '1063083',
@@ -72,7 +72,7 @@ class FormsFrontpoint {
       if(respostaPerson){
 
         const objDeal = {
-          title: "FP-Reestilização Linkedin - TesteDEV",
+          title: "FP-Reestilização Linkedin",
           value: 0,
           currency: 'BRL',
           user_id: '1063083',
@@ -122,7 +122,7 @@ class FormsFrontpoint {
       if(respostaPerson){
 
         const objDeal = {
-          title: "FP-Contato - TesteDEV",
+          title: "FP-Contato",
           value: 0,
           currency: 'BRL',
           user_id: '1063083',
@@ -171,7 +171,7 @@ class FormsFrontpoint {
         if(respostaPerson){
 
           const objDeal = {
-            title: "FP-Negócio - TesteDEV",
+            title: "FP-Negócio",
             value: 0,
             currency: 'BRL',
             user_id: '1063083',

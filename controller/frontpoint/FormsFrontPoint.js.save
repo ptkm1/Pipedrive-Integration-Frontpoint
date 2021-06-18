@@ -70,7 +70,7 @@ var FormsFrontpoint = /** @class */ (function () {
                             title: "FP-Carreira",
                             value: 0,
                             currency: 'BRL',
-                            user_id: '',
+                            user_id: '1063083',
                             person_id: respostaPerson.data.id,
                             org_id: null,
                             stage_id: '570',
@@ -122,7 +122,7 @@ var FormsFrontpoint = /** @class */ (function () {
                             title: "FP-Reestilização Linkedin",
                             value: 0,
                             currency: 'BRL',
-                            user_id: '',
+                            user_id: '1063083',
                             person_id: respostaPerson.data.id,
                             org_id: null,
                             stage_id: '570',
@@ -175,7 +175,7 @@ var FormsFrontpoint = /** @class */ (function () {
                             title: "FP-Contato",
                             value: 0,
                             currency: 'BRL',
-                            user_id: '',
+                            user_id: '1063083',
                             person_id: respostaPerson.data.id,
                             org_id: null,
                             stage_id: '570',
@@ -224,7 +224,7 @@ var FormsFrontpoint = /** @class */ (function () {
                         respostaPerson = (_b.sent()).data;
                         if (!respostaPerson) return [3 /*break*/, 4];
                         objDeal = {
-                            title: "FP-Negócio",
+                            title: "FP-Neg�,
                             value: 0,
                             currency: 'BRL',
                             user_id: '',
